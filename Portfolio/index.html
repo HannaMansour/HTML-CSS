@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanna Mansour's Portfolio</title>
+<style>
+/* General Reset */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+section {
+    padding: 40px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #1a1a1a;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 15px;
+}
+.navbar li {
+    margin: 0 20px;
+}
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.navbar a:hover {
+    color: #00f0ff;
+}
+
+/* Hero Section */
+#home {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.video-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 8px #000;
+}
+
+/* Centered Image with Style */
+.center-section {
+    text-align: center;
+}
+.styled-image {
+    width: 300px;
+    border-radius: 20px;
+    filter: grayscale(50%) brightness(1.1);
+    margin-top: 20px;
+}
+
+/* Two-Column Layout */
+.columns {
+    display: flex;
+    justify-content: space-around;
+    background: #f4f4f4;
+}
+.column {
+    width: 40%;
+    height: 200px;
+    background-color: #fff;
+    padding: 20px;
+    color: #333;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Paragraph Hover */
+.hover-paragraph {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.hover-paragraph:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+/* Table */
+.table-section table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+.table-section th, .table-section td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+.table-section th {
+    background-color: #444;
+    color: white;
+}
+
+/* Text Over Image */
+.text-on-image {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+.text-on-image img {
+    width: 100%;
+    display: block;
+}
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px 30px;
+    border-radius: 10px;
+}
+
+/* Image Overlay Fade */
+.image-fade-container {
+    text-align: center;
+}
+.image-fade-wrapper {
+    position: relative;
+    display: inline-block;
+}
+.fade-img {
+    width: 100%;
+    max-width: 900px;
+}
+.fade-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0);
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.image-fade-wrapper:hover .fade-overlay {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-weight: bold;
+    background-color: #111;
+    color: white;
+    padding: 20px;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Fixed Navbar -->
+<nav class="navbar">
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section with Autoplay Background Video and Overlay Text -->
+<header id="home">
+    <video autoplay muted loop class="bg-video">
+        <source src="https://cdn.pixabay.com/video/2016/08/22/4733-179738669_tiny.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <div class="video-text">Welcome to My Portfolio</div>
+</header>
+
+<!-- Image Section (centered, rounded, filtered) -->
+<section class="center-section">
+    <h2>Profile Picture</h2>
+    <img src="https://cdn.pixabay.com/photo/2020/03/05/16/44/engineer-4904884_1280.jpg" alt="Placeholder" class="styled-image">
+</section>
+
+<!-- Two-Column Layout -->
+<section class="columns">
+    <div class="column">
+        <h3>Skills</h3>
+        <p>HTML, CSS, JavaScript, Bootstrap, Python</p>
+    </div>
+    <div class="column">
+        <h3>Hobbies</h3>
+        <p>Coding, Design, Reading</p>
+    </div>
+</section>
+
+<!-- Paragraph with Hover Effect -->
+<section>
+    <p class="hover-paragraph">Hover over me to see something cool happen!</p>
+</section>
+
+<!-- Table Section -->
+<section class="table-section">
+    <h2>Education</h2>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+        </tr>
+        <tr>
+            <td>X</td>
+            <td>X</td>
+            <td>O</td>
+        </tr>
+        <tr>
+            <td>O</td>
+            <td>X</td>
+            <td>O</td>
+        </tr>    <tr>
+            <td></td>
+            <td>O</td>
+            <td>X</td>
+        </tr>
+    </table>
+</section>
+
+<!-- Text over Image -->
+<section class="text-on-image">
+    <img src="https://cdn.pixabay.com/photo/2020/03/05/16/44/engineer-4904884_1280.jpg" alt="Sample">
+    <div class="overlay-text">Design is Intelligence Made Visible</div>
+</section>
+
+<!-- Image Overlay Fade Effect -->
+<section class="image-fade-container">
+    <div class="image-fade-wrapper">
+        <img src="https://cdn.pixabay.com/photo/2020/03/05/16/44/engineer-4904884_1280.jpg" alt="Fade" class="fade-img">
+        <div class="fade-overlay">Hover Me</div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    &copy; 2025 Hanna Mansour. All rights reserved.
+</footer>
+
+</body>
+</html>
